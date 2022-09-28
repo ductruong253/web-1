@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style type="text/css">
+        input:required:invalid,
+        input:focus:invalid {
+            background-image: url(/images/invalid.png);
+            background-position: right top;
+            background-repeat: no-repeat;
+        }
+
+        input:required:valid {
+            background-image: url(/images/valid.png);
+            background-position: right top;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <input required type="text" name="name" id="name" placeholder="Name" oninput="this.setCustomValidity('')"
+            oninvalid="this.setCustomValidity('Please enter your name!')"><br>
+        <input type="email" name="email" id="email" placeholder="Email" required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"><br>
+        <input required type="text" name="subject" id="subject" placeholder="Subject"
+            oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please enter subject!')"><br>
+        <textarea required name="message" id="message" class="form-control" rows="3"
+            oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please enter message!')"
+            required="required"></textarea><br>
+        <input type="submit" name="submit" id="submit">
+    </form>
+</body>
+
+</html>
