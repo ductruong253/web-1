@@ -1,0 +1,24 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    background-image: url('/img/bg.jpg');
+}
+
+.index-1st-heading {
+    text-align: center;
+    color: #E6A756;
+    margin: 5rem 0 0 0; 
+}
+
+.index-2st-paragraph {
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+    margin: 0 0 5rem 0;
+}
+
+.navbar {
+    background-color: rgba(47, 23, 15, 0.9);
+}
