@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/20880108.css">
+    <title>20880108</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="index-1st-heading">BAI THI CUOI KY MON LAP TRINH WEB 1</h1>
+        <p class="index-2st-paragraph">DTTX - HK2/2019-2020</p>
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="container">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="index.html">Câu 1</a>
+                    </li>
+                    <li class="nav-item mx-4 ">
+                        <a class="nav-link" href="cau2.html">Câu 2</a>
+                    </li>
+                    <li class="nav-item mx-4 active">
+                        <a class="nav-link" href="cau3.html">Câu 3</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="images">
+    </div>
+
+    <footer class="footer text-center container-fluid text-white py-3">
+        <p class="text-white-50">
+            Copyright &copy; by 20880108 - Dang Duc Truong
+        </p>
+    </footer>
+
+
+    <!-- Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script id="image-template" type="text/x-handlebars-template">
+        {{#each data}}
+        <div class="slide-container">
+            <div class="slide-text slide-text-{{side}}">
+                <p class="slogan p-0">{{slogan}}</p>
+                <p class="title p-0">{{{title}}}</p>
+            </div>
+            <div class="slide-image">
+                <img src="{{imagepath}}" alt="">
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="vendor/data.js"></script>
+    <script>
+        let jsonData = {
+            data: getData()
+        }
+        for (item of jsonData.data) {
+            if (item.id % 2 == 0) {
+                item.side = 'right'
+            } else {
+                item.side = 'left'
+            }
+        }
+        var source = document.getElementById('image-template').innerHTML;
+        var template = Handlebars.compile(source);
+        var context = {
+                data: jsonData.data
+            }
+        var view = document.getElementById('images');
+        view.innerHTML = template(context);
+    </script>
+</body>
+
+</html>

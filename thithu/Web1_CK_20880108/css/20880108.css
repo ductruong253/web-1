@@ -1,3 +1,8 @@
+:root {
+    --web1-brown: rgba(47, 23, 15, 0.9);
+    --web1-orange: #E6A756;
+}
+
 html {
     font-size: 16px;
 }
@@ -8,8 +13,9 @@ body {
 
 .index-1st-heading {
     text-align: center;
-    color: #E6A756;
-    margin: 5rem 0 0 0; 
+    color: var(--web1-orange);
+    margin: 5rem 0 0 0;
+    font-weight: bold;
 }
 
 .index-2st-paragraph {
@@ -20,5 +26,158 @@ body {
 }
 
 .navbar {
-    background-color: rgba(47, 23, 15, 0.9);
+    background-color: var(--web1-brown);
+}
+
+.navbar .container {
+    justify-content: center;
+}
+
+.navbar li.active a {
+    color: var(--web1-orange) !important;
+    font-weight: bold !important;
+}
+
+.navbar li a {
+    display: block;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.banner-container {
+    padding: 80px ;
+    width: 100%;
+    position: relative;
+}
+
+.banner-container .text-in-box {
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    border-radius: 0.25rem;
+    background-color: white;
+    opacity: 0.85;
+    padding: 50px 10px;
+}
+
+.banner-container .text-in-box .mssv{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.banner-container .text-in-box .ten-sv{
+    font-size: 3rem;
+}
+
+.banner-container .text-in-box .text-in-box-content{
+    font-size: 1.25rem;
+}
+
+.banner-container .banner-image {
+    text-align: right;
+}
+
+.banner-container .banner-image img{
+    width: 70%;
+}
+
+.form-container {
+    justify-content: center;
+    text-align: center;
+    background-color: var(--web1-orange);
+    margin: 100px 0;
+    padding: 50px 200px;
+}
+.form-content {
+    outline: 0.2rem solid var(--web1-orange);
+    outline-offset: -0.4rem;
+    border-radius: 0.2rem;
+    background-color: white;
+    margin: 20px 40px;
+    padding: 40px 20px;
+}
+
+.form-container input {
+    width: 100%;
+}
+
+.form-container textarea {
+    width: 100%;
+}
+
+.form-container button {
+    background-color: var(--web1-orange);
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 0.4rem;
+}
+
+.title-1 {
+    font-weight: bold;
+}
+
+.title-2 {
+    font-size: 3rem;
+}
+
+.slide-container {
+    margin-top: 4rem;
+    padding: 120px 80px 80px 80px ;
+    width: 100%;
+    position: relative;
+}
+
+.slide-text {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: auto;
+    height: auto;
+    border-radius: 0.25rem;
+    background-color: white;
+    opacity: 0.85;
+    padding: 2rem 4rem;
+}
+
+.slide-text-left {
+    right: 400px;
+}
+
+.slide-text-right {
+    left: 400px;
+}
+.slogan {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}
+
+
+.slide-image {
+    text-align: center;
+}
+
+
+footer {
+    background-color: var(--web1-brown);
+    font-weight: bold;
+}
+
+footer p {
+    padding: 0 0;
+    margin: 0 0;
 }
